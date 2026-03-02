@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QIcon
-
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QIcon,  QFont
+from PyQt5.QtCore import Qt
 """
 sys: This is a built-in Python module that provides access to variables and functions that interact with the Python interpreter.
 PyQt5.QtWidgets: This module contains all the main GUI “widgets” such as buttons, labels, and windows.
@@ -16,9 +16,20 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("CMP 25-26 Year 1")
         self.setGeometry(700,300,500,500) #xy,width,hight
         #x: distance from th left edge of your screen
-        #y : distance from top of your screen
+        #y : distance from top of your 
         self.setWindowIcon(QIcon("images/Greg.png"))
-
+        self.lable=QLabel("hello", self)
+        #added lkable
+        #placing labke
+        self.setStyleSheet(
+            "color: pink;"
+            "background-color: #87CEFA;"
+            "font-weight: bold;"
+            "font-style: italic;"
+            "text-decoration: underline;"
+        )
+        #self.lable.setGeometry("0,0,500,100")
+        self.lable.setAlignment(Qt.AlignCenter)
 def main():
     app = QApplication(sys.argv) #creates th emain applictaion and passes in an y command line arguments
     window = MainWindow() #instatiste our main window
