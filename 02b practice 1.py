@@ -7,41 +7,31 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("CMP 25-26 Year 1")
-        self.setGeometry(700,300,600,800) #xy,width,hight
+        self.setGeometry(700,300,800,600) #xy,width,hight
         #x: distance from th left edge of your screen
         #y : distance from top of your 
         self.setWindowIcon(QIcon("images/Greg.png"))
         self.label=QLabel("i dont know", self)
         #added lkable
         #placing labke
-        self.setStyleSheet(
+        self.label.setStyleSheet(
             "color: black;"
-            "background-color: #87CEFA;"
             "font-weight: bold;"
             "font-style: italic;"
             "text-decoration: underline;"
+        )
+        self.setStyleSheet(
+            "backgroun"
         )
         self.label.setGeometry(0,0,500,100)
         self.label.setAlignment(Qt.AlignCenter)
         self.label=QLabel("hello", self)
         #added lkable
         #placing labke
-        self.setStyleSheet(
-            "color: green;"
-            "font-weight: bold;"
-            "font-style: italic;"
-            "text-decoration: underline;"
-        )
         self.label.setGeometry(0,0,300,100)
         self.label=QLabel("goodbye", self)
         #added lkable
         #placing labke
-        self.setStyleSheet(
-            "color: green;"
-            "font-weight: bold;"
-            "font-style: italic;"
-            "text-decoration: underline;"
-        )
         self.label.setGeometry(0,0,800,100)
         self.piclabel = QLabel(self)
         self.piclabel.setGeometry(0,60, 300,250)
